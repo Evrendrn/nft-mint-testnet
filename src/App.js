@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Moralis from "moralis"
 
 function App() {
-  const contractAddress="0x71357C53876cC98FD1c4479efdAd0973e760614e";
+  const contractAddress="0x4664b4f76b6230D9CfbdA93ea73ee60b08827082";
   const rpcUrl="https://data-seed-prebsc-1-s1.binance.org:8545/"
   const nftPrice="0.15";
   const [mweb3,setMweb3]=useState();
@@ -32,8 +32,8 @@ function App() {
 
   const getUserNFTs=async(address)=>{
     setLoading(true)
-    const serverUrl = "https://x7w2bsuox27y.usemoralis.com:2053/server";
-    const appId = "6Upd1waarc32if1jSOYe2t9mA97ivmFQnq3kMI9U";
+    const serverUrl = "https://zkdlwrji3tzu.usemoralis.com:2053/server";
+    const appId = "cFAG0AwfIaUNBAdKC05HIaN2dYmkfM1bj3Rshl9d";
     await Moralis.start({ serverUrl, appId });
     const options = { address, chain: "bsc testnet" };
     const NFTs = await Moralis.Web3.getNFTs(options);
