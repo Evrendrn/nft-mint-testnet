@@ -32,8 +32,8 @@ function App() {
 
   const getUserNFTs=async(address)=>{
     setLoading(true)
-    const serverUrl = "https://x7w2bsuox27y.usemoralis.com:2053/server";
-    const appId = "6Upd1waarc32if1jSOYe2t9mA97ivmFQnq3kMI9U";
+    const serverUrl = "https://zkdlwrji3tzu.usemoralis.com:2053/server";
+    const appId = "cFAG0AwfIaUNBAdKC05HIaN2dYmkfM1bj3Rshl9d";
     await Moralis.start({ serverUrl, appId });
     const options = { address, chain: "bsc testnet" };
     const NFTs = await Moralis.Web3.getNFTs(options);
