@@ -119,7 +119,7 @@ function App() {
           <h2>Please Connect</h2>
           <h4>Connect to the network (Accepted Wallet: Metamask).</h4>
           <a onClick={walletConnect} className="btn main-btn mb-2">CONNECT</a>
-          <h3>Price : 0.11 BNB (+ Gas fees)</h3>
+          <h3>Price : 0.1 BNB (+ Gas fees)</h3>
         </div>
         <div className="col-md-3"></div>
       </div>:<><div className="row">
