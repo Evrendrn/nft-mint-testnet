@@ -115,10 +115,11 @@ function App() {
       {!walletAddress?<div className="row">
         <div className="col-md-3"></div>
         <div className="col-md-6 text-center">
+	  <h1>BNBNFTS</h1>
           <h2>Please Connect</h2>
           <h4>Connect to the network (Accepted Wallet: Metamask).</h4>
           <a onClick={walletConnect} className="btn main-btn mb-2">CONNECT</a>
-          <h3>Price : 0.15 BNB (+ Gas fees)</h3>
+          <h3>Price : 0.1 BNB (+ Gas fees)</h3>
         </div>
         <div className="col-md-3"></div>
       </div>:<><div className="row">
@@ -132,7 +133,7 @@ function App() {
 						  	<button onClick={()=>{amountToMint<mintData?.maxMint&&setAmount(amountToMint+1)}} className="quantity-field ms-1">+</button>
 						</div>
 						<a onClick={mintHandler} className="btn main-btn mint mb-2">MINT</a>
-						<h3>Price : 0.15 BNB (+ Gas fees)</h3>
+						<h3>Price : 0.1 BNB (+ Gas fees)</h3>
 					</div>
 					<div className="col-md-3"></div>
 
