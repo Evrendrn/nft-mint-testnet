@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Moralis from "moralis"
 
 function App() {
-  const contractAddress="0xFaf042eA32d8E27af2aF4E34A9FC9F3764Ae36CF";
+  const contractAddress="0x101f1580A8d63699C179caF962679Dc261D99E0e";
   const rpcUrl="https://data-seed-prebsc-1-s1.binance.org:8545/"
   const nftPrice="0.10";
   const [mweb3,setMweb3]=useState();
