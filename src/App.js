@@ -26,7 +26,7 @@ function App() {
     const maxMint=await contract.methods.totalSupply().call();
     setMintData({
       totalMint,
-      maxMint
+      totalSupply
     });
   },[])
 
