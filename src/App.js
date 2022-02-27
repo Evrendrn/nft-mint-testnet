@@ -23,7 +23,7 @@ function App() {
     const web3 = new Web3(rpcUrl);
     const contract = new web3.eth.Contract(contractAbi,contractAddress);
     const totalMint=await contract.methods.totalMint().call();
-    const maxMint=await contract.methods.maxMint().call();
+    const maxMint=await contract.methods.totalSupply().call();
     setMintData({
       totalMint,
       maxMint
@@ -65,7 +65,7 @@ function App() {
     try{
       await window.ethereum.request({ method: 'eth_requestAccounts' });
       const contract = new mweb3.eth.Contract(contractAbi,contractAddress);
-      const tx=await contract.methods.awardItem(walletAddress,amountToMint).send({from:walletAddress,value:amountToMint*Web3.utils.toWei(nftPrice, 'ether')});
+      const tx=await contract.methods.mint(walletAddress,amountToMint).send({from:walletAddress,value:amountToMint*Web3.utils.toWei(nftPrice, 'ether')});
       if(tx){
         toast.success('🦄 NFT minted successfully.', {
           position: "bottom-right",
