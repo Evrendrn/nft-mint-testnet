@@ -133,7 +133,7 @@ function App() {
 						  	<button onClick={()=>{amountToMint<mintData?.maxMint&&setAmount(amountToMint+1)}} className="quantity-field ms-1">+</button>
 						</div>
 						<a onClick={mintHandler} className="btn main-btn mint mb-2">MINT</a>
-						<h3>Price : 0.1 BNB (+ Gas fees)</h3>
+						<h3>Price : 0.05 BNB (+ Gas fees)</h3>
 					</div>
 					<div className="col-md-3"></div>
 
