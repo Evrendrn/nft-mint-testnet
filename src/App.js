@@ -8,9 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Moralis from "moralis"
 
 function App() {
-  const contractAddress="0x1BB94f6732AD7309C68211DFD70BD1B21B8E4106";
+  const contractAddress="0x733017f2Cee2ce22a24e96D421c6fFE582D41AEe";
   const rpcUrl="https://data-seed-prebsc-1-s1.binance.org:8545/"
-  const nftPrice="0.01";
+  const nftPrice="0.15";
   const [mweb3,setMweb3]=useState();
   const [mintData,setMintData]=useState();
   const [walletAddress,setWallet]=useState();
@@ -32,8 +32,8 @@ function App() {
 
   const getUserNFTs=async(address)=>{
     setLoading(true)
-    const serverUrl = "https://zkdlwrji3tzu.usemoralis.com:2053/server";
-    const appId = "cFAG0AwfIaUNBAdKC05HIaN2dYmkfM1bj3Rshl9d";
+    const serverUrl = "https://x7w2bsuox27y.usemoralis.com:2053/server";
+    const appId = "6Upd1waarc32if1jSOYe2t9mA97ivmFQnq3kMI9U";
     await Moralis.start({ serverUrl, appId });
     const options = { address, chain: "bsc testnet" };
     const NFTs = await Moralis.Web3.getNFTs(options);
@@ -65,7 +65,7 @@ function App() {
     try{
       await window.ethereum.request({ method: 'eth_requestAccounts' });
       const contract = new mweb3.eth.Contract(contractAbi,contractAddress);
-      const tx=await contract.methods.mint(walletAddress,amountToMint).send({from:walletAddress,value:amountToMint*Web3.utils.toWei(nftPrice, 'ether')});
+      const tx=await contract.methods.awardItem(walletAddress,amountToMint).send({from:walletAddress,value:amountToMint*Web3.utils.toWei(nftPrice, 'ether')});
       if(tx){
         toast.success('🦄 NFT minted successfully.', {
           position: "bottom-right",
@@ -118,8 +118,7 @@ function App() {
           <h2>Please Connect</h2>
           <h4>Connect to the network (Accepted Wallet: Metamask).</h4>
           <a onClick={walletConnect} className="btn main-btn mb-2">CONNECT</a>
-	  <h3>Presale Price : 0.05 BNB (+ Gas fees)</h3>
-          <h3>Sale Price : 0.1 BNB (+ Gas fees)</h3>
+          <h3>Price : 0.15 BNB (+ Gas fees)</h3>
         </div>
         <div className="col-md-3"></div>
       </div>:<><div className="row">
@@ -133,7 +132,7 @@ function App() {
 						  	<button onClick={()=>{amountToMint<mintData?.maxMint&&setAmount(amountToMint+1)}} className="quantity-field ms-1">+</button>
 						</div>
 						<a onClick={mintHandler} className="btn main-btn mint mb-2">MINT</a>
-						<h3>Price : 0.1 BNB (+ Gas fees)</h3>
+						<h3>Price : 0.15 BNB (+ Gas fees)</h3>
 					</div>
 					<div className="col-md-3"></div>
 
