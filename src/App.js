@@ -10,7 +10,7 @@ import Moralis from "moralis"
 function App() {
   const contractAddress="0x101f1580A8d63699C179caF962679Dc261D99E0e";
   const rpcUrl="https://data-seed-prebsc-1-s1.binance.org:8545/"
-  const nftPrice="0.10";
+  const nftPrice="0.05";
   const [mweb3,setMweb3]=useState();
   const [mintData,setMintData]=useState();
   const [walletAddress,setWallet]=useState();
@@ -119,7 +119,7 @@ function App() {
           <h2>Please Connect</h2>
           <h4>Connect to the network (Accepted Wallet: Metamask).</h4>
           <a onClick={walletConnect} className="btn main-btn mb-2">CONNECT</a>
-          <h3>Price : 0.1 BNB (+ Gas fees)</h3>
+          <h3>Price : 0.05 BNB (+ Gas fees)</h3>
         </div>
         <div className="col-md-3"></div>
       </div>:<><div className="row">
